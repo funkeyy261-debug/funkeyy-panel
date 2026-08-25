@@ -6,13 +6,12 @@ from functools import wraps
 app = Flask(__name__)
 app.secret_key = "funkeyy_secret_2026"
 
-DB = "funkeyy_v2.db"
+DB = "/tmp/funkeyy.db"
 
 # ================= ADMIN LOGIN =================
 
 ADMIN_USER = "admin"
 ADMIN_PASSWORD = "12345"
-
 # आफ्नो contact पछि यहाँ change गर्न सक्छौ
 TELEGRAM_LINK = "https://t.me/your_username"
 WHATSAPP_LINK = "https://wa.me/9779800000000"
