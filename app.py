@@ -980,6 +980,12 @@ def delete_request(id):
 @app.route("/clear", methods=["POST"])
 @login_required
 def clear_requests():
+    conn = get_db()
+    conn.execute("DELETE FROM requests")
+    conn.commit()
+    conn.close()
+
+
 @app.route("/logout")
 def logout():
     session.clear()
@@ -995,6 +1001,7 @@ if __name__ == "__main__":
         host="127.0.0.1",
         port=5000,
         debug=False
+    )
     )
     conn = get_db()
 
