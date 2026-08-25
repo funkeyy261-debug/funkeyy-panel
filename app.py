@@ -6,7 +6,7 @@ from functools import wraps
 app = Flask(__name__)
 app.secret_key = "funkeyy_secret_2026"
 
-DB = "funkeyy.db"
+DB = "funkeyy_v2.db"
 
 # ================= ADMIN LOGIN =================
 
