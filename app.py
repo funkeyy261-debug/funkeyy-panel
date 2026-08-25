@@ -192,9 +192,11 @@ FUNKEYY PANEL
 
 <h3>PRICE LIST</h3>
 
-<p>👍 Like Service — Rs. 40</p>
-<p>💎 Top Up — Contact Admin</p>
-<p>⬆️ Level Up — Contact Admin</p>
+prices = {
+    "Like Service": "Contact Admin",
+    "Top Up": "Contact Admin",
+    "Level Up": "Contact Admin"
+}
 
 </div>
 
