@@ -23,12 +23,7 @@ WHATSAPP_LINK = "https://wa.me/9779800000000"
 def get_db():
     conn = sqlite3.connect(DB)
     conn.row_factory = sqlite3.Row
-    try:
-        conn.execute("ALTER TABLE requests ADD COLUMN price TEXT")
-    except:
-        pass
     return conn
-
 
 def init_db():
     conn = get_db()
