@@ -38,7 +38,10 @@ def init_db():
             created_at TEXT NOT NULL
         )
     """)
-
+try:
+    conn.execute("ALTER TABLE requests ADD COLUMN price TEXT")
+except sqlite3.OperationalError:
+    pass
     conn.commit()
     conn.close()
 
