@@ -15,7 +15,7 @@ ADMIN_PASSWORD = "20622"
 
 TELEGRAM_LINK = "https://t.me/funkeyy_dinesh_bot"
 WHATSAPP_LINK = "https://wa.me/9779765936556"
-
+TELEGRAM_BOT_TOKEN = "8852511502:AAGlo6IPNgy2NFQiVzPzOMuyqcJO93Vps1c"
 
 # ================= DATABASE =================
 
