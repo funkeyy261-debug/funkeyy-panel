@@ -808,8 +808,7 @@ def home():
     message = ""
     order_id = None
 
-        if request.method == "POST":
-
+    if request.method == "POST":
         uid = request.form.get("uid", "").strip()
         payment_id = request.form.get("payment_id", "").strip()
         service = request.form.get("service", "").strip()
@@ -817,7 +816,6 @@ def home():
         is_admin = session.get("admin")
 
         if uid and service and (payment_id or is_admin):
-
             price = get_price(service)
 
             if is_admin:
@@ -826,7 +824,6 @@ def home():
                 status = "Pending"
 
             conn = get_db()
-
             cursor = conn.execute(
                 """
                 INSERT INTO requests
@@ -843,7 +840,6 @@ def home():
             )
 
             order_id = cursor.lastrowid
-
             conn.commit()
             conn.close()
 
