@@ -191,11 +191,11 @@ FUNKEYY PANEL
 
 <h3>PRICE LIST</h3>
 
-prices = {
-    "Like Service": "Contact Admin",
-    "Top Up": "Contact Admin",
-    "Level Up": "Contact Admin"
-}
+<p>100 Like = Rs. 40 (1 Day)</p>
+<p>700 Like = Rs. 180 (7 Days)</p>
+<p>1500 Like = Rs. 270 (15 Days)</p>
+<p>3000 Like = Rs. 430 (30 Days)</p>
+<p>6000 Like = Rs. 680 (60 Days)</p>
 
 </div>
 
