@@ -805,10 +805,10 @@ def payment_qr():
 @app.route("/", methods=["GET", "POST"])
 def home():
 
-    message = ""
-    order_id = None
+message = ""
+order_id = None
 
-    if request.method == "POST":
+if request.method == "POST":
 
     uid = request.form.get("uid", "").strip()
     payment_id = request.form.get("payment_id", "").strip()
@@ -844,6 +844,10 @@ def home():
 
         order_id = cursor.lastrowid
 
+        conn.commit()
+        conn.close()
+
+        message = "Request submitted successfully!"
         conn.commit()
         conn.close()
 
