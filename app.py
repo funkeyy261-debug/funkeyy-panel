@@ -1002,19 +1002,3 @@ if __name__ == "__main__":
         port=5000,
         debug=False
     )
-    )
-    conn = get_db()
-
-    conn.execute(
-        "DELETE FROM requests"
-    )
-
-    conn.commit()
-    conn.close()
-
-    return redirect(url_for("admin_panel"))
-
-
-# ================= LOGOUT =================
-
-
