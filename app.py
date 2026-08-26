@@ -983,6 +983,8 @@ def clear_requests():
     conn.commit()
     conn.close()
 
+    return redirect(url_for("admin_panel"))
+
 
 @app.route("/logout")
 def logout():
