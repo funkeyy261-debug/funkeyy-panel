@@ -797,14 +797,18 @@ def get_price(service):
 
     return prices.get(service, "Contact Admin")
 
-
 # ================= HOME =================
+
 @app.route("/IMG-20260822-WA0043.jpg")
 def payment_qr():
-    return send_from_directory(os.path.dirname(__file__), "IMG-20260822-WA0043.jpg")
+    return send_from_directory(
+        os.path.dirname(__file__),
+        "IMG-20260822-WA0043.jpg"
+    )
+
+
 @app.route("/", methods=["GET", "POST"])
 def home():
-
     message = ""
     order_id = None
 
@@ -824,6 +828,7 @@ def home():
                 status = "Pending"
 
             conn = get_db()
+
             cursor = conn.execute(
                 """
                 INSERT INTO requests
@@ -839,14 +844,12 @@ def home():
                 )
             )
 
-        )
+            order_id = cursor.lastrowid
 
-    order_id = cursor.lastrowid
+            conn.commit()
+            conn.close()
 
-    conn.commit()
-    conn.close()
-
-    message = "Request submitted successfully!"
+            message = "Request submitted successfully!"
 
     return render_template_string(
         MAIN_HTML,
@@ -868,23 +871,19 @@ def admin_login():
     error = ""
 
     if request.method == "POST":
-
-        username = request.form.get("username")
-        password = request.form.get("password")
+        username = request.form.get("username", "")
+        password = request.form.get("password", "")
 
         if username == ADMIN_USER and password == ADMIN_PASSWORD:
-
             session["admin"] = True
-
             return redirect(url_for("admin_panel"))
-
         else:
             error = "Wrong username or password!"
 
     return render_template_string(
         LOGIN_HTML,
         error=error
-    )
+        )
 
 
 # ================= DASHBOARD =================
