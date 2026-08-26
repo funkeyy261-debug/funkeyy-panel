@@ -810,30 +810,44 @@ def home():
 
     if request.method == "POST":
 
-        uid = request.form.get("uid", "").strip()
-        service = request.form.get("service", "").strip()
+    uid = request.form.get("uid", "").strip()
+    payment_id = request.form.get("payment_id", "").strip()
+    service = request.form.get("service", "").strip()
 
-        if uid and service:
+    is_admin = session.get("admin")
 
-            price = get_price(service)
+    if uid and service and (payment_id or is_admin):
 
-            conn = get_db()
+        price = get_price(service)
 
-            cursor = conn.execute(
-                """
-                INSERT INTO requests
-                (user_id, service, price, status, created_at)
-                VALUES (?, ?, ?, ?, ?)
-                """,
-                (
-                    uid,
-                    service,
-                    price,
-                    "Pending",
-                    datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                )
+        if is_admin:
+            status = "Admin Approved"
+        else:
+            status = "Pending"
+
+        conn = get_db()
+
+        cursor = conn.execute(
+            """
+            INSERT INTO requests
+            (user_id, service, price, status, created_at)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                uid,
+                service,
+                price,
+                status,
+                datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             )
+        )
 
+        order_id = cursor.lastrowid
+
+        conn.commit()
+        conn.close()
+
+        message = "Request submitted successfully!"
             order_id = cursor.lastrowid
 
             conn.commit()
