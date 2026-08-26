@@ -792,7 +792,7 @@ def get_price(service):
 
 
 # ================= HOME =================
-@app.route("/payment-qr")
+@app.route("/IMG-20260822-WA0043.jpg")
 def payment_qr():
     return send_from_directory(os.path.dirname(__file__), "IMG-20260822-WA0043.jpg")
 @app.route("/", methods=["GET", "POST"])
