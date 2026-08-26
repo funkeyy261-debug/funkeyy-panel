@@ -10,11 +10,11 @@ DB = "/tmp/funkeyy.db"
 
 # ================= ADMIN LOGIN =================
 
-ADMIN_USER = "admin"
-ADMIN_PASSWORD = "12345"
-# आफ्नो contact पछि यहाँ change गर्न सक्छौ
-TELEGRAM_LINK = "https://t.me/your_username"
-WHATSAPP_LINK = "https://wa.me/9779800000000"
+ADMIN_USER = "dinesh×funkeyy"
+ADMIN_PASSWORD = "20622"
+
+TELEGRAM_LINK = "https://t.me/funkeyy_dinesh_bot"
+WHATSAPP_LINK = "https://wa.me/9779765936556"
 
 
 # ================= DATABASE =================
