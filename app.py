@@ -4,7 +4,7 @@ from datetime import datetime
 from functools import wraps
 import os
 app = Flask(__name__)
-app.secret_key = "funkeyy_secret_2026"
+app.secret_key = os.environ.get("SECRET_KEY", "change_this_to_a_long_random_secret")
 
 DB = "/tmp/funkeyy.db"
 
