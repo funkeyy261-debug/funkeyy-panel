@@ -218,6 +218,13 @@ required
 <button type="submit">
 SUBMIT REQUEST
 </button>
+<div class="payment">
+    <h3>PAYMENT OPTIONS</h3>
+    <p><b>Khalti:</b> 9765936556</p>
+    <p><b>Nepal Bank Limited</b></p>
+    <p>Scan QR to pay:</p>
+    <img src="/IMG-20260822-WA0043.jpg" alt="Nepal Bank Payment QR" style="width:220px; max-width:100%; border-radius:10px;">
+</div>
 
 </form>
 
