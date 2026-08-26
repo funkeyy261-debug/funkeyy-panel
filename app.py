@@ -9,11 +9,11 @@ app.secret_key = "funkeyy_secret_2026"
 DB = "/tmp/funkeyy.db"
 
 # ================= ADMIN LOGIN =================
-ADMIN_USER = os.environ.get("dinesh-funkeyy", "")
-ADMIN_PASSWORD = os.environ.get("97659", "")
+ADMIN_USER = os.environ.get("ADMIN_USER", "funkeyy×dinesh")
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "36556")
 TELEGRAM_LINK = "https://t.me/funkeyy_dinesh_bot"
 WHATSAPP_LINK = "https://wa.me/977765936556"
-TELEGRAM_BOT_TOKEN = os.environ.get("8852511502:AAG5-vUBvxLZ-FnhU6-WRWQxhyazMyx6WDY", "")
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8852511502:AAFVwF9VFbdHzpG_VCJyu3Ro8bf9U6vUQtI")
 # ================= DATABASE =================
 
 def get_db():
