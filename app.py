@@ -839,29 +839,14 @@ def home():
                 )
             )
 
-            order_id = cursor.lastrowid
-            conn.commit()
-            conn.close()
-
-            message = "Request submitted successfully!"
         )
 
-        order_id = cursor.lastrowid
+    order_id = cursor.lastrowid
 
-        conn.commit()
-        conn.close()
+    conn.commit()
+    conn.close()
 
-        message = "Request submitted successfully!"
-        conn.commit()
-        conn.close()
-
-        message = "Request submitted successfully!"
-            order_id = cursor.lastrowid
-
-            conn.commit()
-            conn.close()
-
-            message = "Request submitted successfully!"
+    message = "Request submitted successfully!"
 
     return render_template_string(
         MAIN_HTML,
