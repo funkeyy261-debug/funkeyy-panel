@@ -31,7 +31,9 @@ def init_db():
             service TEXT NOT NULL,
             price TEXT NOT NULL,
             status TEXT NOT NULL DEFAULT 'Pending',
-            created_at TEXT NOT NULL
+created_at TEXT NOT NULL,
+payment_id TEXT,
+payment_status TEXT NOT NULL DEFAULT 'Unpaid'
         )
     """)
 
