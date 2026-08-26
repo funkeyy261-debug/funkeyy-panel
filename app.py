@@ -206,7 +206,12 @@ name="uid"
 placeholder="Enter User ID"
 required
 >
-
+<input
+    type="text"
+    name="payment_id"
+    placeholder="Enter Payment / Transaction ID"
+    required
+>
 <select name="service" required>
 
 <option value="">Select Service</option>
