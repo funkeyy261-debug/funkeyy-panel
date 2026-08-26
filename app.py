@@ -206,12 +206,14 @@ name="uid"
 placeholder="Enter User ID"
 required
 >
+{% if not session.get('admin') %}
 <input
     type="text"
     name="payment_id"
     placeholder="Enter Payment / Transaction ID"
     required
 >
+{% endif %}
 <select name="service" required>
 
 <option value="">Select Service</option>
