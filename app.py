@@ -9,7 +9,7 @@ app.secret_key = "funkeyy_secret_2026"
 DB = "/tmp/funkeyy.db"
 
 # ================= ADMIN LOGIN =================
-
+ADMIN_USER = "dinesh+funkeyy"
 ADMIN_PASSWORD = "20622"
 TELEGRAM_LINK = "https://t.me/funkeyy_dinesh_bot"
 WHATSAPP_LINK = "https://wa.me/977765936556"
