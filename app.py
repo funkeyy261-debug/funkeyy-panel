@@ -2,19 +2,18 @@ from flask import Flask, request, render_template_string, redirect, url_for, ses
 import sqlite3
 from datetime import datetime
 from functools import wraps
-
+import os
 app = Flask(__name__)
 app.secret_key = "funkeyy_secret_2026"
 
 DB = "/tmp/funkeyy.db"
 
 # ================= ADMIN LOGIN =================
-ADMIN_USER = "dinesh+funkeyy"
-ADMIN_PASSWORD = "20622"
+ADMIN_USER = os.environ.get("dinesh-funkeyy", "")
+ADMIN_PASSWORD = os.environ.get("97659", "")
 TELEGRAM_LINK = "https://t.me/funkeyy_dinesh_bot"
 WHATSAPP_LINK = "https://wa.me/977765936556"
-TELEGRAM_BOT_TOKEN = "8852511502:AAFBNlfbccuxYu2jLyKYWTKV-uWw5pCxqbo"
-
+TELEGRAM_BOT_TOKEN = os.environ.get("8852511502:AAG5-vUBvxLZ-FnhU6-WRWQxhyazMyx6WDY", "")
 # ================= DATABASE =================
 
 def get_db():
